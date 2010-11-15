@@ -1,0 +1,72 @@
+1> create table employee( 
+    e_id integer not null,
+    e_name varchar2(30) not null,
+    dept varchar2(15) not null,
+    lvl integer not null, 
+    password varchar2(30) not null,
+    address varchar2(100) not null,
+    ph_no varchar2(15),
+    dob date not null,
+    email_id varchar2(30),
+    sr_id integer,
+    primary key (e_id));
+
+
+
+2> create table problem(
+   prob_id integer,
+   subject varchar(100) not null,
+   prob_detail varchar2(1000) not null,
+   p_date date not null,
+   pholder_id integer not null,
+   p_status integer not null,
+   primary key(prob_id));
+   
+   
+
+3> create table solved_prob(
+   prob_id integer,
+   p_solution varchar2(500) not null,
+   solvedby integer not null,
+   sol_date date not null,
+   primary key(prob_id));
+
+
+
+4> create table p_comment(
+   c_date date not null,
+   prob_id integer not null,
+   commentby_id integer not null,
+   cmnt varchar2(500)not null,
+   lvl integer not null);
+   
+
+
+5> create table customer(
+   prob_id integer not null,
+   c_address varchar2(100) not null,
+   email_id varchar2(30),
+   ph_no varchar2(15));
+
+
+
+6> create table notice(
+   e_id integer not null,
+   dept varchar2(20) not null,
+   n_date date not null,
+   notice_st varchar2(200) not null);
+
+
+
+7> create table work_log(
+   prob_id integer not null,
+   e_id integer not null,
+   w_date date not null,
+   p_status integer not null);
+
+
+
+8> create table e_post(
+   no integer not null,
+   rank varchar(20) not null);
+ 
